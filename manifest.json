@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "youTube user banner",
+    "version": "1.0.0",
+    "description": "This extention helps you easily moderate user's comments in youTube",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts" : [
+        {
+        "matches": ["*://studio.youtube.com/channel/*"],
+        "run_at": "document_idle",
+        "js": ["content-script.js"]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "activeTab"
+    ]
+}
