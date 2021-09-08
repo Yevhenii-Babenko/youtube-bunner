@@ -1,7 +1,9 @@
 // alert('Hello !!!')
-const btn = document.getElementById("home-button")
-btn.addEventListener(
-    "click", 
-    function () { 
-        alert('action btn was pressed')
-})
+window.setTimeout(function() {
+    const commentElements = document.querySelectorAll('#action-menu-button')
+    commentElements.forEach(function (commentElement) {
+        const span = document.createElement('span');
+        span.innerHTML = "Hello!!! ";
+        commentElement.after(span)
+    })
+}, 5000)
